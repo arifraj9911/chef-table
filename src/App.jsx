@@ -21,7 +21,7 @@ function App() {
     if (!itemSelected) {
       setSelectedItem(newItem);
     } else {
-      toast("Recipe already added");
+      toast(`${item.recipe_name} already added`);
     }
   };
 
@@ -48,7 +48,7 @@ function App() {
           vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
           elementum mauris aenean neque.{" "}
         </p>
-        <div className="flex flex-col-reverse md:flex-row gap-6">
+        <div className="flex flex-col-reverse md:flex-row gap-6 items-start">
           <Recipes handleSelectedItem={handleSelectedItem}></Recipes>
           <Cooking
             selectedItem={selectedItem}

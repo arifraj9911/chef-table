@@ -2,28 +2,42 @@ import Cooked from "../Cooked/Cooked";
 
 const CurrentlyCooking = ({ currentlyCooking, totalTime, totalCalories }) => {
   return (
-    <div>
-      <h3 className="text-2xl flex flex-col items-center mt-8">
+    <div className="mb-5">
+      <h3 className="text-2xl font-semibold flex flex-col items-center mt-8">
         Currently Cooking:{currentlyCooking.length}
       </h3>
       <hr className="w-3/4 mx-auto mt-4 mb-6" />
-      <div className="flex flex-col items-center">
+      <div className=" overflow-x-auto w-full">
         <table className="table">
           {/* head */}
           <thead>
-            {currentlyCooking.map((cook) => (
-              <Cooked key={cook.recipe_id} cook={cook}></Cooked>
-            ))}
+          <tr className="text-[#878787] text-[16px] font-normal">
+              <th></th>
+              <th>Name</th>
+              <th>Time</th>
+              <th>Calories</th>
+              <th></th>
+            </tr>
           </thead>
-          <tbody>{/* row 1 */}</tbody>
+          <tbody>
+            {/* row 1 */}
+          {currentlyCooking.map((cook,idx) => (
+              <Cooked key={cook.recipe_id} cook={cook} idx={idx}></Cooked>
+            ))}
+          </tbody>
+          <tfoot>
+          {currentlyCooking.length > 0 && (
+        <tr className="">
+          <th></th>
+          <th></th>
+          <th>Total Time = <span className="block"></span> {totalTime} minutes</th>
+          <th>Total Calories = <span className="block"></span> {totalCalories} calories</th>
+        </tr>
+      )}
+          </tfoot>
         </table>
       </div>
-      {currentlyCooking.length > 0 && (
-        <div>
-          <span>Total Time = {totalTime}</span>
-          <span>Total Calories = {totalCalories}</span>
-        </div>
-      )}
+     
     </div>
   );
 };

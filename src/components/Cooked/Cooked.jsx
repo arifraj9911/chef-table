@@ -1,14 +1,14 @@
 const Cooked = ({ cook }) => {
-  const { recipe_name, preparing_time, calories, recipe_id } = cook;
+  const { recipe_name, preparing_time, calories } = cook;
+  // console.log(idx);
   return (
-    <div className="flex flex-col items-center">
-      <tr>
-        <th>{recipe_id}</th>
+    <tr className="text-[#878787] text-[16px] font-normal bg-[#28282808]">
+      <th></th>
         <td>{recipe_name}</td>
         <td>{preparing_time}</td>
         <td>{calories}</td>
+        <th></th>
       </tr>
-    </div>
   );
 };
 

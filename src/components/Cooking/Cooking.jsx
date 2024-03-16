@@ -9,7 +9,7 @@ const Cooking = ({
   totalCalories,
 }) => {
   return (
-    <div className="lg:w-2/5 border-2 rounded-2xl">
+    <div className="w-full lg:w-2/5 border-2 rounded-2xl">
       <h3 className="text-2xl font-semibold flex flex-col items-center mt-8">
         Want to Cook:{selectedItem.length}
       </h3>
@@ -26,12 +26,12 @@ const Cooking = ({
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-            {selectedItem.map((item) => (
+            {selectedItem.map((item, idx) => (
               <SelectMenu
                 key={item.id}
                 item={item}
                 handleCurrentlyCooking={handleCurrentlyCooking}
+                idx={idx}
               ></SelectMenu>
             ))}
           </tbody>
