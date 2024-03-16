@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 
 
-const Recipes = () => {
+const Recipes = ({handleSelectedItem}) => {
     const [recipes,setRecipes] = useState([])
 
     useEffect(()=>{
@@ -11,11 +11,10 @@ const Recipes = () => {
         .then(data=>setRecipes(data))
     },[])
     return (
-        <div className="w-2/3">
-            <h1>Recipes:{recipes.length}</h1>
+        <div className="w-3/5">
             <div className="grid grid-cols-2 gap-6">
             {
-                recipes.map(recipe=><Recipe key={recipe.id} recipe={recipe}></Recipe>)
+                recipes.map(recipe=><Recipe key={recipe.id} recipe={recipe} handleSelectedItem={handleSelectedItem}></Recipe>)
             }
             </div>
         </div>

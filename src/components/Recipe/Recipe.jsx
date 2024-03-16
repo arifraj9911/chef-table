@@ -1,4 +1,4 @@
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe,handleSelectedItem }) => {
   const {
     recipe_image,
     recipe_name,
@@ -6,6 +6,7 @@ const Recipe = ({ recipe }) => {
     ingredients,
     preparing_time,
     calories,
+    recipe_id
   } = recipe;
   return (
     <div className="flex flex-col p-6 border-2 rounded-2xl">
@@ -28,7 +29,7 @@ const Recipe = ({ recipe }) => {
         <span>{preparing_time} minute</span>
         <span>{calories} calories</span>
       </div>
-      <button className="btn btn-accent mt-12">Want to Cook</button>
+      <button onClick={()=>handleSelectedItem(recipe,recipe_id)} className="btn btn-accent mt-12">Want to Cook</button>
     </div>
   );
 };
