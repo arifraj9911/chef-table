@@ -1,8 +1,6 @@
-
 import Cooked from "../Cooked/Cooked";
 
-const CurrentlyCooking = ({ currentlyCooking,totalTime,totalCalories }) => {
-  
+const CurrentlyCooking = ({ currentlyCooking, totalTime, totalCalories }) => {
   return (
     <div>
       <h3 className="text-2xl flex flex-col items-center mt-8">
@@ -14,16 +12,18 @@ const CurrentlyCooking = ({ currentlyCooking,totalTime,totalCalories }) => {
           {/* head */}
           <thead>
             {currentlyCooking.map((cook) => (
-              <Cooked key={cook.recipe_id} cook={cook} ></Cooked>
+              <Cooked key={cook.recipe_id} cook={cook}></Cooked>
             ))}
           </thead>
           <tbody>{/* row 1 */}</tbody>
         </table>
       </div>
-      <div>
-        <span>Total Time = {totalTime}</span>
-        <span>Total Calories = {totalCalories}</span>
-      </div>
+      {currentlyCooking.length > 0 && (
+        <div>
+          <span>Total Time = {totalTime}</span>
+          <span>Total Calories = {totalCalories}</span>
+        </div>
+      )}
     </div>
   );
 };
