@@ -12,7 +12,7 @@ const Recipe = ({ recipe, handleSelectedItem }) => {
     recipe_id,
   } = recipe;
   return (
-    <div className="flex flex-col p-6 border-2 rounded-2xl ">
+    <div className="flex flex-col p-6 border-2 rounded-2xl">
       <img src={recipe_image} alt="" />
       <h1 className="text-xl mt-6 mb-4 font-semibold">{recipe_name}</h1>
       <p className="text-[16px] text-[#878787]">{short_description}</p>

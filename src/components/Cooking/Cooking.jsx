@@ -9,7 +9,7 @@ const Cooking = ({
   totalCalories,
 }) => {
   return (
-    <div className="w-full lg:w-2/5 border-2 rounded-2xl">
+    <div className=" lg:w-2/5 border-2 rounded-2xl">
       <h3 className="text-2xl font-semibold flex flex-col items-center mt-8">
         Want to Cook:{selectedItem.length}
       </h3>
@@ -25,10 +25,10 @@ const Cooking = ({
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="">
             {selectedItem.map((item, idx) => (
               <SelectMenu
-                key={item.id}
+                key={idx}
                 item={item}
                 handleCurrentlyCooking={handleCurrentlyCooking}
                 idx={idx}
@@ -37,11 +37,13 @@ const Cooking = ({
           </tbody>
         </table>
       </div>
-      <CurrentlyCooking
-        currentlyCooking={currentlyCooking}
-        totalTime={totalTime}
-        totalCalories={totalCalories}
-      ></CurrentlyCooking>
+      <div>
+        <CurrentlyCooking
+          currentlyCooking={currentlyCooking}
+          totalTime={totalTime}
+          totalCalories={totalCalories}
+        ></CurrentlyCooking>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import Cooked from "../Cooked/Cooked";
 
 const CurrentlyCooking = ({ currentlyCooking, totalTime, totalCalories }) => {
   return (
-    <div className="mb-5">
+    <div className=" mb-5">
       <h3 className="text-2xl font-semibold flex flex-col items-center mt-8">
         Currently Cooking:{currentlyCooking.length}
       </h3>

@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Recipes from "./components/Recipes/Recipes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState([]);
@@ -48,7 +49,7 @@ function App() {
           vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
           elementum mauris aenean neque.{" "}
         </p>
-        <div className="flex flex-col-reverse md:flex-row gap-6 items-start">
+        <div className="flex flex-col-reverse md:flex-row gap-6 lg:items-start">
           <Recipes handleSelectedItem={handleSelectedItem}></Recipes>
           <Cooking
             selectedItem={selectedItem}
@@ -59,6 +60,7 @@ function App() {
           ></Cooking>
         </div>
       </div>
+      <Footer></Footer>
       <ToastContainer />
     </>
   );

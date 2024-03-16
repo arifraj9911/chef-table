@@ -1,12 +1,12 @@
 const SelectMenu = ({ item, handleCurrentlyCooking, idx }) => {
   const { recipe_name, preparing_time, calories, recipe_id } = item;
   return (
-    <tr className="text-[#878787] text-[16px] font-normal bg-[#28282808]">
+    <tr className="text-[#878787] text-[16px] font-normal  bg-[#28282808]">
       <th>{idx + 1}</th>
       <td>{recipe_name}</td>
       <td>{preparing_time} minutes</td>
       <td>{calories} calories</td>
-      <th>
+      <td>
         <button
           onClick={() =>
             handleCurrentlyCooking(item, recipe_id, preparing_time, calories)
@@ -15,7 +15,7 @@ const SelectMenu = ({ item, handleCurrentlyCooking, idx }) => {
         >
           Preparing
         </button>
-      </th>
+      </td>
     </tr>
   );
 };
