@@ -1,22 +1,22 @@
 const SelectMenu = ({ item, handleCurrentlyCooking }) => {
   const { recipe_name, preparing_time, calories, recipe_id } = item;
   return (
-    <div className="flex flex-col items-center">
-      <tr>
-        <th>{recipe_id}</th>
-        <td>{recipe_name}</td>
-        <td>{preparing_time}</td>
-        <td>{calories}</td>
-        <td>
-          <button
-            onClick={() => handleCurrentlyCooking(item, recipe_id,preparing_time,calories)}
-            className="btn btn-accent"
-          >
-            Preparing
-          </button>
-        </td>
-      </tr>
-    </div>
+    <tr className="text-[#878787] text-[16px] font-normal bg-[#28282808]">
+      <td>{recipe_id}</td>
+      <td>{recipe_name}</td>
+      <td>{preparing_time} minutes</td>
+      <td>{calories} calories</td>
+      <td>
+        <button
+          onClick={() =>
+            handleCurrentlyCooking(item, recipe_id, preparing_time, calories)
+          }
+          className="px-4 lg:px-5 py-3 lg:py-4 bg-[#7951ff] border-0 hover:bg-none text-white rounded-[50px]"
+        >
+          Preparing
+        </button>
+      </td>
+    </tr>
   );
 };
 

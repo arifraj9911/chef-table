@@ -42,13 +42,13 @@ function App() {
     <>
       <Header></Header>
       <div className="flex flex-col items-center mt-24 ">
-        <h2 className="text-4xl">Our Recipes</h2>
-        <p className="w-3/5 text-center mt-6 mb-12 text-[16px] font-normal">
+        <h2 className="text-3xl lg:text-[40px] font-semibold">Our Recipes</h2>
+        <p className="lg:w-3/5 text-center mt-3 lg:mt-6 mb-12 text-sm lg:text-[16px] font-normal text-[#150b2b99]">
           Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus
           vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
           elementum mauris aenean neque.{" "}
         </p>
-        <div className="flex gap-6">
+        <div className="flex flex-col-reverse md:flex-row gap-6">
           <Recipes handleSelectedItem={handleSelectedItem}></Recipes>
           <Cooking
             selectedItem={selectedItem}
