@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import Recipes from "./components/Recipes/Recipes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/Footer/Footer";
 
 function App() {
   const [selectedItem, setSelectedItem] = useState([]);
@@ -42,12 +41,10 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className="flex flex-col items-center mt-24 ">
+      <div id="recipes" className="flex flex-col items-center mt-24 ">
         <h2 className="text-3xl lg:text-[40px] font-semibold">Our Recipes</h2>
         <p className="lg:w-3/5 text-center mt-3 lg:mt-6 mb-12 text-sm lg:text-[16px] font-normal text-[#150b2b99]">
-          Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus
-          vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
-          elementum mauris aenean neque.{" "}
+        Savor the Perfect Harmony of Spices and Fresh Ingredients in Our Signature Dish. A Culinary Masterpiece Bursting with Flavor and Aroma, Sure to Delight Your Taste Buds with Every Bite
         </p>
         <div className="flex flex-col-reverse md:flex-row gap-6 lg:items-start">
           <Recipes handleSelectedItem={handleSelectedItem}></Recipes>
@@ -60,7 +57,6 @@ function App() {
           ></Cooking>
         </div>
       </div>
-      <Footer></Footer>
       <ToastContainer />
     </>
   );

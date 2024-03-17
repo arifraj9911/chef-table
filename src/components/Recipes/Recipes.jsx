@@ -17,6 +17,7 @@ const Recipes = ({ handleSelectedItem }) => {
             key={recipe.id}
             recipe={recipe}
             handleSelectedItem={handleSelectedItem}
+            
           ></Recipe>
         ))}
       </div>

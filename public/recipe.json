@@ -14,7 +14,7 @@
         "calories": 380
     },
     {
-        "recipe_image": "https://i.ibb.co/jgwKxfZ/Rectangle-20170-1.png",
+        "recipe_image": "https://i.ibb.co/D7HXj3n/pasta-carbona.jpg",
         "recipe_id": "2",
         "recipe_name": "Pasta Carbonara",
         "short_description": "Creamy pasta dish with crispy bacon and parmesan cheese.",
@@ -28,7 +28,7 @@
         "calories": 450
     },
     {
-        "recipe_image": "https://i.ibb.co/jgwKxfZ/Rectangle-20170-1.png",
+        "recipe_image": "https://i.ibb.co/GCvT9Qt/vegetable-soup.jpg",
         "recipe_id": "3",
         "recipe_name": "Vegetable Soup",
         "short_description": "Healthy and comforting vegetable soup packed with nutritious veggies.",
@@ -42,7 +42,7 @@
         "calories": 150
     },
     {
-        "recipe_image": "https://i.ibb.co/kyh4LvQ/Rectangle-20170.png",
+        "recipe_image": "https://i.ibb.co/HPXLT5C/Grilled-salmon.jpg",
         "recipe_id": "4",
         "recipe_name": "Grilled Salmon",
         "short_description": "Juicy and flavorful grilled salmon seasoned with herbs and lemon.",
@@ -70,7 +70,7 @@
         "calories": 120
     },
     {
-        "recipe_image": "https://i.ibb.co/kyh4LvQ/Rectangle-20170.png",
+        "recipe_image": "https://i.ibb.co/ngrvGj7/Chocklate-cake.jpg",
         "recipe_id": "6",
         "recipe_name": "Chocolate Cake",
         "short_description": "Decadent chocolate cake that melts in your mouth, perfect for any occasion.",

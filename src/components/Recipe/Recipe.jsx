@@ -13,12 +13,18 @@ const Recipe = ({ recipe, handleSelectedItem }) => {
   } = recipe;
   return (
     <div className="flex flex-col p-6 border-2 rounded-2xl">
-      <img src={recipe_image} alt="" />
+      <img
+        className="w-[330px] h-[200px] rounded-2xl"
+        src={recipe_image}
+        alt=""
+      />
       <h1 className="text-xl mt-6 mb-4 font-semibold">{recipe_name}</h1>
       <p className="text-[16px] text-[#878787]">{short_description}</p>
       <hr className="mt-4 mb-6" />
       <p className="text-lg">
-        <span className="text-lg font-normal">Ingredients</span>
+        <span className="text-lg font-normal">
+          Ingredients: {ingredients.length}
+        </span>
         <ul className="pl-8 mt-4">
           {ingredients.map((item, idx) => (
             <li

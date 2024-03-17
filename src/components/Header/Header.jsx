@@ -77,7 +77,7 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a className="text-[#150b2bb3]" href="#">
+                <a className="text-[#150b2bb3]" href="#recipes">
                   Recipes
                 </a>
               </li>
@@ -102,7 +102,7 @@ const Header = () => {
                 className="input input-bordered bg-[#150b2b0d] rounded-[50px] text-[#150b2bb3] w-24 md:w-auto pl-10"
               />
             </div>
-            <div className=" rounded-full bg-[#0BE58A] p-2">
+            <div className=" rounded-full bg-[#7951ff]  p-2">
               <CgProfile className="text-3xl " />
             </div>
           </div>
